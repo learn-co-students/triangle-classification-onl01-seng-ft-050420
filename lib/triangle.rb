@@ -10,9 +10,9 @@ class Triangle
 
   def kind
     if legal?
-      if leng_1 == leng_2 && leng_2 == leng_3
+      if @leng_1 == @leng_2 && @leng_2 == @leng_3
         :equilateral
-      elsif leng_1 == leng_2 || leng_2 == leng_3 || leng_1 == leng_3
+      elsif @leng_1 == @leng_2 || @leng_2 == @leng_3 || @leng_1 == @leng_3
         :isosceles
       else
         :scalene
@@ -23,9 +23,9 @@ class Triangle
   end
 
   def legal?
-    if leng_3 <= 0 || leng_2 <= 0 || leng_1 <= 0
+    if @leng_3 <= 0 || @leng_2 <= 0 || @leng_1 <= 0
       false
-    elsif (leng_1 + leng_2) <= leng_3 || (leng_3 + leng_2) <= leng_1 || (leng_1 + leng_3) <= leng_2
+    elsif (@leng_1 + @leng_2) <= @leng_3 || (@leng_3 + @leng_2) <= @leng_1 || (@leng_1 + @leng_3) <= @leng_2
       false
     else
       true
